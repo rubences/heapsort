@@ -49,10 +49,10 @@ def heap_sort(unsorted):
     for i in range(n - 1, 0, -1):
         unsorted[0], unsorted[i] = unsorted[i], unsorted[0]
         heapify(unsorted, 0, i)
-        print(f"Paso {n-i}: {unsorted}")
     return unsorted
 
+
 if __name__ == "__main__":
-    user_input = input("Enter numbers separated by a comma:\n").strip()
+    user_input = input("Introduce los numeros separados por comas:\n").strip()
     unsorted = [int(item) for item in user_input.split(",")]
     print(heap_sort(unsorted))
